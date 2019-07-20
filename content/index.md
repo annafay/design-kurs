@@ -1,25 +1,32 @@
 ---
 title: "Min fina titel"
+views:
+    panda:
+        region: sidebar-right
+        template: anax/v2/block/default
+        data:
+            meta: 
+                type: single
+                route: block/om-panda
+    byline:
+        region: main
+        template: anax/v2/block/default
+        sort: 2
+        data:
+            meta: 
+                type: single
+                route: block/byline
 ---
 Min me-sida i kursen design
 =========================
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/index.md`.
 
-[FIGURE src="image/me.jpg?w=500" class="right" caption="Bild på mig"]
 
-Detta är min me-sida i kursen. Denna sidan innehåller en presentation av mig själv. Underhåll denna sidan under hela kursen och uppdatera den efter hand och behov.
+[FIGURE src="img/me2.jpg?w=50" class="right" caption="Inkognito"]
 
-Så, en presentation en bra början. Skriv några ord om dig själv. Jag börjar.
 
-Mitt namn är Mikael Roos. Född och uppvuxen i Bankeryd, Småland, strax utanför Jönköping, i ett villaområde som byggdes upp samtidigt som vi flyttade in där. Jag gillade landhockey och har spelat bandy och hockey samt gått bowlinggymnasiet i Nässjö. Jag har varit städare, diskare, kallskänka, servitör och kock. På ett bananskal landade jag i Ronneby när jag började högskolan 1990 där och nu är jag kvar med fru, barn och så vidare.
+Mitt namn är Anna Sandberg och är född och uppvuxen i Stockholm. Jag jobbar som teknisk chef för Shair Broadcast Technology AB, ett företag som säljer och marknadsför teknik till den proffesionella TV- & videoföretag samt fotografer.
 
-Programmering har alltid intresserat mig sedan 13-årsåldern och min första dator var en Spectravideo 328 med bandspelare.
+Innan dess så jobbade jag under ca tjugo år som animatör och videografiker. Efter att ha blivit mer och mer intresserad av tekniken bakom påbörjade jag en civilingenjörsutbildning i Medieteknik på KTH i Stockholm. Den utbildningen visade sig dock vara mindre teknikinriktad än vad jag förväntat mig varför jag sökt kurser utanför det ordinarie programmet.
 
-Om jag skall nämna någon hobby, förutom webbprogrammering, så får det bli att bära sten på sommarstugetomten, och det finns sten så det räcker och blir över.
-
-Till och från får jag för mig att börja på lite hobbies, ett år satsade jag på pokerspel, ett annat år var det geocaching och sedan turfing. Nu ligger jag lågt med hobbies, men något kanske dyker upp...?
-
-Vi syns och hörs i forum och chatt!
-
-/Mikael
+På fritiden gillar jag att pyssla med datorer, jag fick min första dator redan som åttaåring och har aldrig slutat fascineras av dem. Utöver programmeringen ägnar jag mig också åt att måla akvarell och odla porslinssblommor.

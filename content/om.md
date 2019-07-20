@@ -15,14 +15,20 @@ views:
             meta: 
                 type: single
                 route: block/om-redovisa
+
+    panda:
+        region: sidebar-right
+        template: anax/v2/block/default
+        data:
+            meta: 
+                type: single
+                route: block/om-panda
 ---
 Om
 =========================
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/om.md`.
+Längre fram kommer jag att fylla denna sida med något intelligent men just nu får det duga med en bild av en panda.
 
-Skriv några kloka ord om kursen?
+Har jag sagt att jag gillar pandor?
 
-Lägg till en representativ bild för kursen, enligt ditt egna val.
-
-[FIGURE src=image/car.png?w=300 caption="En fin bil som demobild."]
+[FIGURE src=img/panda.jpg?w=300 caption="En panda."]

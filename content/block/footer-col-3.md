@@ -1,3 +1,3 @@
-#### Footer col 3
+#### Zippy the Pinhead:
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+“Should I start with the time I SWITCHED personalities with a BEATNIK hair stylist or my failure to refer five TEENAGERS to a good OCULIST?”
