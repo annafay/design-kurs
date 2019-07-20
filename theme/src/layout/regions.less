@@ -1,0 +1,106 @@
+/**
+ * Show off the regions used in the website, to ease styling.
+ */
+// @import "regions-header.less"; 
+@import "regions-sidebar.less";
+@import "regions-footer.less";
+
+.regions .outer-wrap {
+    background-color: #f4e3c9;
+    border: 1px solid darken(#f4e3c9, 20%);
+}
+
+.regions .inner-wrap {
+    background-color: #f4e0e9;
+    border: 1px solid darken(#f4e0e9, 20%);
+}
+
+.regions {
+    .region-header-col-1,
+    .region-header-col-2,
+    .region-header-col-3,
+    .region-flash,
+    .region-breadcrumb,
+    .region-flash-message,
+    .region-columns-above,
+    .region-main,
+    .region-after-main,
+    .region-columns-below,
+    .region-sidebar-left,
+    .region-sidebar-right,
+    .region-footer,
+    .region-footer-column-1,
+    .region-footer-column-2,
+    .region-footer-column-3 {
+        background-color: #b5dce1;
+        border: 1px solid darken(#b5dce1, 20%);
+        color: #111;
+    }
+}
+
+.region-flash {
+    display: inline;
+    float: left;
+}
+
+.region-flash {
+    display: block;
+    padding: 10px;
+    position: relative;
+    animation: flashfadein;
+    animation-duration: 1s; 
+    animation-timing-function: ease-out; //ease-in-out;
+    -webkit-animation: flashfadein; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-timing-function: ease-out; //ease-in-out;   
+}
+
+/* Standard syntax */
+@keyframes flashfadein {
+    from {transform: scale(1.2);}
+    to {transform: scale(1);}
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    10% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+    
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes flashfadein {
+    from {-webkit-transform: scale(1.2);}
+    to {-webkit-transform: scale(1);}
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    10% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+.region-main {
+    display: inline;
+    float: left;
+    // width: 75%;
+    // margin-left: .5%;
+    // margin-right: .5%;
+    // margin-left: 10%;
+}

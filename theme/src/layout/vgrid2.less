@@ -1,0 +1,311 @@
+
+
+/**
+ * Layout using vgrid
+ */
+
+.row {
+    #desinax-vgrid.row();
+}
+ 
+/**
+ * Import
+ */
+@import "navbar.less";
+// @import "desktop.less";
+@import "sidebar.less";
+@import "footer.less";
+
+ /**
+  * Variables
+  */
+
+/**
+ * Header layout
+ */
+.outer-wrap {
+    background-color: #fff;
+}
+
+.outer-wrap-header {
+    background-color: #fff;
+}
+
+.outer-wrap-flash {
+    background-color: #fff;
+    // margin-left: 0;
+    // margin-right: 0;
+}
+
+.flash-wrap {
+    #desinax-vgrid.column(@columns);
+}
+
+
+
+.region-header-col-1,
+.region-header-col-3 {
+    #desinax-vgrid.column(5);
+    // float: left;
+    // width: 70%;
+}
+
+.region-header-col-2 {
+    #desinax-vgrid.column(14);
+    text-align: center;
+}
+
+/**
+ * Main and sidebar layout
+ */
+.inner-wrap {
+   overflow: visible;
+}
+
+.inner-wrap {
+    #desinax-vgrid.grid(1100px);
+
+    &.inner-wrap-header {
+        // #desinax-vgrid.grid(100%);
+    }
+}
+
+.inner-wrap-main {
+    // .clearfix();
+   // overflow: hidden;
+   overflow: visible;
+}
+
+.region-navbar {
+    #desinax-vgrid.column(@columns);
+}
+
+.region-main,
+.region-sidebar-left,
+.region-sidebar-right {
+    overflow: auto;
+}
+
+.region-main {
+    #desinax-vgrid.column(20);
+    // margin-left: 10%;
+    // float: left;
+    overflow: auto;
+       
+    &.has-sideba {
+    // margin-left: 0;   
+    }
+    
+    &.has-sidebar-left.has-sidebar-right {
+        // width
+    }
+}
+
+.region-sidebar-left,
+.region-sidebar-right {
+    #desinax-vgrid.column(4);
+    // width: auto;
+    // float: left;
+}
+
+.region-sidebar-left.has-sidebar-right,
+.region-sidebar-right.has-sidebar-left {
+    // width: 20%;
+}
+
+/**
+ * Footer layout
+ */
+.footer-column {
+    #desinax-vgrid.column(@columns / 3);
+}
+
+.outer-wrap-footer,
+.inner-wrap-footer {
+    color: #fff;
+    background-color: @Dark-Slate-Gray;
+}
+
+/**
+ * General layout
+ */
+.block {
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.row {
+    display: block;
+    // width: 100%;
+    // margin-left: -.5%;
+    // margin-right: -.5%;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+article::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.column {
+    height: 100%;
+}
+
+.info {
+    border: 2px solid @infoborder;
+    color: #205791;
+    background-color: @infofill;
+}
+.info, .warning {
+    padding: .5em;
+    margin-bottom: 20px;
+}
+
+.toc {
+    list-style: none;
+    margin: 0;
+    margin-top: 1em;
+    margin-bottom: 0px;
+    padding: 0;
+    margin-bottom: 24px;
+    line-height: 1.2em;
+}
+
+// .sticky {
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+// }
+// 
+// .sticky + .content {
+//   padding-top: 60px;
+// }
+
+/**
+ * Breadcrumb
+ */
+.breadcrumb-list, .bullet-list {
+    font-size: .875em;
+    line-height: 1.7;
+}
+
+.breadcrumb-list li a, .bullet-list li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/**
+  * Byline
+  */
+.author-byline {
+    border: 1px solid #ccc;
+    margin-bottom: 46px;
+}
+.author-byline p {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.author-byline::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.author-byline .figure.figure.left {
+    margin-left: 20px;
+}
+
+/**
+  * Site-logo
+  */
+.site-logo {
+    display: none;
+}
+
+.site-logo-text-icon {
+    display: none;
+}
+
+.site-logo-text a {
+    font-family: @fontFamilyTitles;
+    text-decoration: none;
+    font-size: 3em;
+    font-weight: 700;
+    color: @Sienna;
+}
+
+.site-footer {
+    color: #aaa;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/**
+ * Figure
+ */
+ .figure.figure.right {
+     float: right;
+ }
+
+.figure.figure.left {
+    float: left;
+}
+ 
+.figure:not(.left) img {
+    display: block;
+    padding: 10px;
+    position: relative;
+    animation: figurefadein;
+    animation-duration: 2s; 
+    animation-timing-function: ease-out; //ease-in-out;
+    -webkit-animation: figurefadein; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-timing-function: ease-out; //ease-in-out;   
+}
+
+/* Standard syntax */
+@keyframes figurefadein {
+    from {transform: rotate(-5deg) scale(1.2);}
+    to {transform: rotate(0deg) scale(1);}
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    10% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+    
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes figurefadein {
+    from {-webkit-transform: rotate(-5deg) scale(1.2);}
+    to {-webkit-transform: rotate(0deg) scale(1);}
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    10% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}

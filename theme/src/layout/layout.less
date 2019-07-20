@@ -1,0 +1,121 @@
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+ /**
+  * Import
+  */
+@import "navbar.less";
+@import "desktop.less";
+@import "sidebar.less";
+@import "footer.less";
+
+/**
+ * Variables
+ */
+@bgColorHtml: #2D2733; // Dark-Slate-Gray
+@bgColorBody: #fff; // White
+@colorBody: #2D2733; // Dark-Slate-Gray
+@a: #C34F19; // Chocolate
+   
+
+/**
+ * General layout
+ */
+.block {
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.row {
+    display: block;
+    width: 100%;
+    margin-left: -.5%;
+    margin-right: -.5%;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.column {
+    height: 100%;
+}
+
+.figure.figure.right {
+    float: right;
+}
+
+.figure.figure.left {
+    float: left;
+}
+ 
+/**
+  * Outher
+  */
+ .outer-wrap {
+     background-color: #fff;
+ }
+
+ .outer-wrap-header {
+     background-color: #fff;
+     height: 48px;
+     margin-bottom: 12px;
+ }
+
+ .outer-wrap-footer {
+     background-color: #3d322d;
+     padding-top: 0px;
+     padding-bottom: 0px;
+ }
+
+ .outer-wrap-flash {
+     background-color: #fff;
+     margin-left: 0;
+     margin-right: 0;
+ }
+
+ /**
+   * Inner
+   */
+.inner-wrap {
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 1100px;
+}
+
+.inner-wrap-main {
+   padding-bottom: 48px;
+}
+
+.inner-wrap-footer {
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 1100px;
+}
+
+/**
+  * Site-logo
+  */
+.site-logo {
+    display: none;
+}
+
+.site-logo-text-icon {
+    display: none;
+}
+
+.site-logo-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    color: #ea5b0c!important;
+}
+
+.site-footer {
+    color: #aaa;
+    text-align: center;
+    padding-bottom: 20px;
+}

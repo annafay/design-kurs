@@ -1,0 +1,165 @@
+/**
+  * Regions sidebar
+  */
+
+.region-sidebar-left, .region-sidebar-right {
+    display: inline;
+    float: left;
+    margin-left: .52083333%;
+    margin-right: .52083333%;
+}  
+  
+  
+/**
+ * Left
+ */
+ .region-sidebar-left {
+     // margin-left: 5%; 
+     width: 20%;  
+ }
+
+
+ .region-sidebar-left .block {
+     display: block;
+     padding: 10px;
+     position: relative;
+     -webkit-animation: leftsidebarmove; /* Safari 4.0 - 8.0 */
+     animation: leftsidebarmove;
+     -webkit-animation-duration: 2s;  /* Safari 4.0 - 8.0 */
+     animation-duration: 2s; 
+     animation-timing-function: ease-out;
+     -webkit-animation-timing-function: ease-out;    
+ }
+
+ /* Safari 4.0 - 8.0 */
+ @-webkit-keyframes leftsidebarmove {
+     from {left: -200px;}
+     to {left: 0px;}
+     0% {
+         display: none;
+         opacity: 0;
+     }
+
+     1% {
+         display: block;
+         opacity: 0;
+     }
+
+     100% {
+         display: block;
+         opacity: 1;
+     }
+ }
+
+ /* Standard syntax */
+ @keyframes leftsidebarmove {
+     from {left: -200px;}
+     to {left: 0px;}
+     0% {
+         display: none;
+         opacity: 0;
+     }
+
+     1% {
+         display: block;
+         opacity: 0;
+     }
+
+     100% {
+         display: block;
+         opacity: 1;
+     }
+ }
+
+ .region-sidebar-left {
+     display: inline;
+     /* float: left;
+     width: 30%;
+     margin-left: .5%;
+     margin-left: .5% */
+ }
+
+ .region-main.has-sidebar-left {
+     display: inline;
+     float: left;
+     width: 65%;
+     margin-right: .5%;
+     margin-left: .5%;
+ }
+
+/**
+ * Right
+ */
+.region-sidebar-right {
+    // margin-left: 5%; 
+    width: 28.125%; 
+}
+
+
+.region-sidebar-right .block {
+    display: block;
+    padding: 10px;
+    position: relative;
+    -webkit-animation: rightsidebarmove; /* Safari 4.0 - 8.0 */
+    animation: rightsidebarmove;
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */
+    animation-duration: 3s; 
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;    
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rightsidebarmove {
+    from {right: -500px;}
+    to {right: 0px;}
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+/* Standard syntax */
+@keyframes rightsidebarmove {
+    from {right: -500px;}
+    to {right: 0px;}
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.region-sidebar-right {
+    display: inline;
+    /* float: left;
+    width: 30%;
+    margin-left: .5%;
+    margin-right: .5% */
+}
+
+.region-main.has-sidebar-right {
+    display: inline;
+    float: left;
+    width: 65%;
+    margin-right: .5%;
+    margin-left: .5%;
+}
