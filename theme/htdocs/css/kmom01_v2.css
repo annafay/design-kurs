@@ -4817,14 +4817,13 @@ body {
 .wrap-sidebar .block h4 {
   /* border-top: 1px solid #ccc; */
   /* background-image: linear-gradient(to right,#fff,#ccc); */
-  border-top: 1px solid #c4268c;
+  border-top: 1px solid #000;
   position: relative;
   margin-bottom: -10px;
 }
 .wrap-sidebar .block h4:first-child:before {
   content: '';
   position: absolute;
-  width: 100%;
   height: 1px;
   background: linear-gradient(to left, #ea5b0c, #3d322d);
   top: -1px;
@@ -5009,15 +5008,13 @@ body {
 .region-sidebar-right {
   display: inline;
   float: left;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
   overflow: visible;
 }
 /**
  * Left
  */
 .region-sidebar-left {
-  width: 20%;
+  margin-top: 38px;
 }
 .region-sidebar-left .block {
   display: block;
@@ -5076,23 +5073,18 @@ body {
 }
 .region-sidebar-left {
   display: inline;
-  /* float: left;
-     width: 30%;
-     margin-left: .5%;
-     margin-left: .5% */
 }
 .region-main.has-sidebar-left {
   display: inline;
   float: left;
-  width: 65%;
-  margin-right: 0.5%;
-  margin-left: 0.5%;
 }
 /**
  * Right
  */
 .region-sidebar-right {
-  width: 28.125%;
+  display: inline;
+  float: left;
+  margin-top: 38px;
 }
 .region-sidebar-right .block {
   display: block;
@@ -5151,17 +5143,12 @@ body {
 }
 .region-sidebar-right {
   display: inline;
-  /* float: left;
-    width: 30%;
-    margin-left: .5%;
-    margin-right: .5% */
+  float: right;
+  margin-top: 38px;
 }
 .region-main.has-sidebar-right {
   display: inline;
   float: left;
-  width: 65%;
-  margin-right: 0.5%;
-  margin-left: 0.5%;
 }
 /**
   * Regions footer
@@ -5169,9 +5156,6 @@ body {
 .region-footer {
   display: inline;
   float: left;
-  width: 98.95833333%;
-  margin-left: 0.52083333%;
-  margin-right: 0.52083333%;
 }
 .regions .outer-wrap {
   background-color: #f4e3c9;

@@ -1,6 +1,13 @@
 ---
 title: "Min fina titel"
 views:
+    redovisa:
+        region: sidebar-left
+        template: anax/v2/block/default
+        data:
+            meta: 
+                type: single
+                route: block/om-redovisa
     panda:
         region: sidebar-right
         template: anax/v2/block/default
@@ -17,7 +24,7 @@ views:
                 type: single
                 route: block/byline
 ---
-Min testsida i kursen design
+Min testsida
 =========================
 
 

@@ -11,10 +11,10 @@
 /**
  * Import
  */
-@import "navbar.less";
+// @import "navbar.less";
 // @import "desktop.less";
-@import "sidebar.less";
-@import "footer.less";
+// @import "sidebar.less";
+// @import "footer.less";
 
  /**
   * Variables
@@ -24,17 +24,15 @@
  * Header layout
  */
 .outer-wrap {
-    background-color: #fff;
+    background-color: @bgColorBody;
 }
 
 .outer-wrap-header {
-    background-color: #fff;
+    background-color: @bgColorBody;
 }
 
 .outer-wrap-flash {
-    background-color: #fff;
-    // margin-left: 0;
-    // margin-right: 0;
+    background-color: @bgColorBody;
 }
 
 .flash-wrap {
@@ -46,8 +44,6 @@
 .region-header-col-1,
 .region-header-col-3 {
     #desinax-vgrid.column(5);
-    // float: left;
-    // width: 70%;
 }
 
 .region-header-col-2 {
@@ -66,13 +62,10 @@
     #desinax-vgrid.grid(1100px);
 
     &.inner-wrap-header {
-        // #desinax-vgrid.grid(100%);
     }
 }
 
 .inner-wrap-main {
-    // .clearfix();
-   // overflow: hidden;
    overflow: visible;
 }
 
@@ -87,30 +80,40 @@
 }
 
 .region-main {
-    #desinax-vgrid.column(20);
-    // margin-left: 10%;
-    // float: left;
-    overflow: auto;
+    #desinax-vgrid.column(@columns * 3/4); //#desinax-vgrid.column(20);
+    #desinax-vgrid.push(2);
+    overflow: visible;
        
-    &.has-sideba {
-    // margin-left: 0;   
+    &.has-sidebar { 
+        #desinax-vgrid.push(0);
+    }
+    &.has-sidebar-left {
+        #desinax-vgrid.column(@columns * 9 / 12);
+    }
+    &.has-sidebar-right {
+        #desinax-vgrid.column(@columns * 9 / 12);
     }
     
     &.has-sidebar-left.has-sidebar-right {
-        // width
+        #desinax-vgrid.column(@columns * 7 / 12);
     }
 }
 
 .region-sidebar-left,
 .region-sidebar-right {
-    #desinax-vgrid.column(4);
-    // width: auto;
-    // float: left;
+    #desinax-vgrid.column(@columns * 1/5);
+}
+
+.region-sidebar-left {
+    // #desinax-vgrid.column(@columns * 1/5);
+}
+.region-sidebar-right {
+    // #desinax-vgrid.column(@columns * 1/5);
 }
 
 .region-sidebar-left.has-sidebar-right,
 .region-sidebar-right.has-sidebar-left {
-    // width: 20%;
+    #desinax-vgrid.column(@columns * 1 / 4 - 1 );
 }
 
 /**
@@ -126,25 +129,66 @@
     background-color: @Dark-Slate-Gray;
 }
 
+.footer-column-wrapper {
+    display: inline;
+    color: #ddd;
+    padding-bottom: 0px;
+    // margin-bottom: 0px;
+}
+
+.footer-column-wrapper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.column.footer-column{
+    padding-top: 5px;
+    padding-bottom: 0px; 
+    // margin-bottom: 0px;
+}
+
+.footer-column-x {
+    padding-bottom: 0px;
+    padding-right: 1em;    
+    padding-left: 1em;
+}
+
+.footer-column-1 {
+padding-left: 2em;  
+}
+
+.footer-column-2 {
+    padding-left: 2em;
+    padding-right: 2em;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.footer-column-3 {
+    padding-left: 2em;
+}
+
 /**
  * General layout
  */
 .block {
-    margin-bottom: 10px;
-    margin-top: 30px;
+    // margin-bottom: 10px;
+    // margin-top: 30px;
 }
 
 .row {
     display: block;
-    // width: 100%;
-    // margin-left: -.5%;
-    // margin-right: -.5%;
 }
 
 .row::after {
     content: "";
     display: block;
     clear: both;
+}
+
+article h1 {
+    border-bottom: 1px solid #000;
 }
 
 article::after {
@@ -169,12 +213,12 @@ article::after {
 
 .toc {
     list-style: none;
-    margin: 0;
-    margin-top: 1em;
-    margin-bottom: 0px;
-    padding: 0;
-    margin-bottom: 24px;
-    line-height: 1.2em;
+    margin-top: 24px;
+}
+
+.toc ul {
+    padding-left: 0px !important;
+    margin-top: 24px;
 }
 
 // .sticky {
@@ -307,5 +351,163 @@ article::after {
     100% {
         display: block;
         opacity: 1;
+    }
+}
+
+/**
+ * Navbar
+ */
+// .rm-navbar-max {
+//     display: inline-block;    
+// }
+
+.rm-navbar {
+
+    margin-top: 5px;
+}
+// 
+// .rm-navbar ul {
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+// }
+// 
+// .rm-navbar li {
+//     list-style-type: none;
+// }
+
+.rm-desktop ul {
+    background-color: @bgColorBody;
+}
+
+.rm-desktop li ul {
+    background-color: @bgColorBody;
+}
+
+.rm-desktop li a {
+    // background-color: @bgColorBody;
+}
+
+.rm-default li li {
+    min-width: 8em;
+}
+
+/**
+  * Sidebar
+  */
+.wrap-sidebar {
+    margin-bottom: 48px;
+}
+
+
+.wrap-sidebar .block {
+    color: #000;
+    background-repeat: no-repeat;
+    background-position: right top;
+    // margin-bottom: 4px;
+}
+
+.wrap-sidebar .block h4 {
+    // background-image: linear-gradient(to right,#fff,#ccc);
+    border-top:1px solid #000;
+    position:relative;
+    margin-bottom: -6px;
+    line-height: 1.2em;
+}
+
+.wrap-sidebar .block h4:first-child:before {
+    content:'';
+    position:absolute;
+    // width:100%;
+    height:1px;
+    background:linear-gradient(to left, #ea5b0c, #3d322d);
+    top:-1px;
+    left:0;
+}
+
+.wrap-sidebar .block h4:first-child:after{
+    content:'';
+    margin: 0px;
+}
+
+.wrap-sidebar .block p {
+    color: #000;
+    background-blend-mode: lighten;
+    margin-top: 24px;
+}
+.wrap-sidebar .block li {
+    // color: #000;
+    // background-blend-mode: lighten;
+    // margin-top: 5px;
+}
+
+/**
+ * Responsive
+ */
+ @media screen and (max-width: 1100px) {
+     article {
+         padding-left: 1em;
+         padding-right: 1em;
+     }
+}
+
+ @media screen and (max-width: 1000px) {
+     .region-main {
+         #desinax-vgrid.column(@columns);
+     }
+}
+
+@media screen and (max-width: 910px) {
+    .region-header-col-1,
+    .region-header-col-3 {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-header-col-2 {
+        #desinax-vgrid.column(@columns);
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .region-main {
+        &.has-sidebar-left {
+            #desinax-vgrid.column(@columns);
+        }
+        &.has-sidebar-right {
+            #desinax-vgrid.column(@columns);
+        }
+        &.has-sidebar-left.has-sidebar-right {
+            #desinax-vgrid.column(@columns);
+        }
+    }
+    .region-sidebar-right {
+        #desinax-vgrid.column(@columns)
+    }
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns)
+    }
+    .region-sidebar-left.has-sidebar-right,
+    .region-sidebar-right.has-sidebar-left {
+        #desinax-vgrid.column(@columns)
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .footer-column {
+        #desinax-vgrid.column(@columns);
+    }
+    .footer-column-2 {
+    border: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .figure {
+        float: none;
+    }
+    .figure.figure.right,
+    .figure.figure.left {
+        float: none;
     }
 }

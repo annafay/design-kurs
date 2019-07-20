@@ -1,0 +1,96 @@
+/**
+ * Layout for responsive style through media queries.
+ */
+
+@media screen and (max-width: 1500px) {
+    .site-logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .region-header-col-1,
+    .region-header-col-3 {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-header-col-2 {
+        #desinax-vgrid.column(@columns);
+        text-align: center;
+    }
+    .region-main {
+        #desinax-vgrid.column(@columns);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .region-main {
+        &.has-sidebar-left {
+            #desinax-vgrid.column(@columns);
+        }
+        &.has-sidebar-right {
+            #desinax-vgrid.column(@columns);
+        }
+        &.has-sidebar-left.has-sidebar-right {
+            #desinax-vgrid.column(@columns);
+        }
+    }
+    .region-sidebar-right {
+        #desinax-vgrid.column(@columns)
+    }
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns)
+    }
+    .region-sidebar-left.has-sidebar-right,
+    .region-sidebar-right.has-sidebar-left {
+        #desinax-vgrid.column(@columns)
+    }
+    // .region-header-col-1,
+    // .region-header-col-3 {
+    //     #desinax-vgrid.column(@columns);
+    // }
+    // 
+    // .region-header-col-2 {
+    //     #desinax-vgrid.column(@columns);
+    //     text-align: center;
+    // }
+}
+
+@media screen and (max-width: 670px) {
+    // .region-main {
+    //     &.has-sidebar-left {
+    //         #desinax-vgrid.column(@columns);
+    //     }
+    //     &.has-sidebar-right {
+    //         #desinax-vgrid.column(@columns);
+    //     }
+    //     &.has-sidebar-left.has-sidebar-right {
+    //         #desinax-vgrid.column(@columns);
+    //     }
+    // }
+    // .region-sidebar-right {
+    //     #desinax-vgrid.column(@columns)
+    // }
+    // .region-sidebar-left {
+    //     #desinax-vgrid.column(@columns)
+    // }
+    // .region-sidebar-left.has-sidebar-right,
+    // .region-sidebar-right.has-sidebar-left {
+    //     #desinax-vgrid.column(@columns)
+    // }
+    // .region-header-col-1,
+    // .region-header-col-3 {
+    //     #desinax-vgrid.column(@columns);
+    // }
+    // 
+    // .region-header-col-2 {
+    //     #desinax-vgrid.column(@columns);
+    //     text-align: center;
+    // }
+    .footer-column {
+        #desinax-vgrid.column(@columns);
+    }
+    .footer-column-2 {
+    border: none;
+    }
+}

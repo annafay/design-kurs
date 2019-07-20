@@ -1,0 +1,69 @@
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+// Font-family
+@fontFamilyBody: 'Archivo', Arial, Helvetica, sans-serif;
+@fontFamilyTitles: 'Montserrat', Arial, Helvetica, sans-serif;
+// Made from full autumn.padding
+@Sienna: #965022;
+@Peru: #D49F57;
+@Dark-Slate-Gray: #1F212F;
+@Dim-Gray: #767158;
+@Light-Steel-Blue: #AECACC;
+
+/* Defaults */
+@bgColorHtml: @Dark-Slate-Gray; // Dark-Slate-Gray
+@bgColorBody: #fff; // White
+@colorBody: @Dark-Slate-Gray; // Dark-Slate-Gray
+@a: @Sienna; // Chocolate
+@infofill: @Light-Steel-Blue;
+@infoborder: darken(@Light-Steel-Blue, 10%);
+  
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: @fontFamilyBody;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    overflow-y: scroll;
+    background-color: @bgColorHtml;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: @colorBody;
+    background-color:@bgColorBody;
+    font: 100.01%/1 @fontFamilyBody;
+}
+
+article {
+    margin-bottom: 72px;
+    height: 100%;
+}
+
+h1 {
+    color: #000;
+    font-size: 2em;
+    margin: .67em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: @fontFamilyTitles;
+}
+
+a {
+    background-color: transparent;
+    color: @a;
+}
+
+img {
+    max-width: 100%;
+    border-style: none;
+}

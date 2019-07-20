@@ -1,0 +1,131 @@
+/*!
+ * LESS version of the stylesheet for design kmom03.
+ *
+ * This stylesheet is for the design course and kmom01. Its intention is to
+ * use kmom01.css and lessify the style and use this as a wrapper for the new
+ * style.
+ */
+ 
+/**
+ * Import mixins.
+ */ 
+@import "mixin/clearfix.less";
+
+.clearfix() {
+    #design-mixin.clearfix();
+}
+
+
+ /**
+ * Normalize and reset the style.
+ */
+@import "normalize.css/normalize.less";
+
+/**
+ * Color scheme
+ */
+// @import "color/kmom02.less";
+
+/**
+ * Font Awesome.
+ */
+@import "@fortawesome/fontawesome-free/less/fontawesome.less";
+@import "@fortawesome/fontawesome-free/less/solid.less";
+@import "@fortawesome/fontawesome-free/less/brands.less";
+@import url('https://fonts.googleapis.com/css?family=Archivo|Montserrat:900&display=swap');
+
+/**
+ * A responsive menu.
+ */
+@import "@desinax/responsive-menu/less/responsive-menu.less";
+@import "@desinax/responsive-menu/less/media-queries.less";
+
+/**
+ * Internal self contained modules, save in directory module/.
+ */
+// @import "module/kmom02.less"; // Just an example module
+@import "module/stylechooser.less";  
+
+/**
+ * Import the typographic grid.
+ */
+@import "@desinax/typographic-grid/less/typography-font-families.less"; 
+@import "@desinax/typographic-grid/less/typography-defaults.less";
+
+// Magic number and base fontsize
+@magicNumber:  24px;  // 22px
+@fontSizeBody: 16px;  //18px
+
+// Activate the grid base font
+// body {
+//     #desinax-hgrid.font(@fontSizeBody);
+// }
+
+// Activate grid and affect all typographic elements
+#desinax-hgrid.activateDefaultTypography();
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../image/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+// @fontFamilyBody: serif;
+// @fontFamilyTitles: serif;
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+// @import "base/base_default.less";
+// @import "base/base.less";
+@import "base/base03-hgrid.less";
+// Activate the grid base font
+body {
+    #desinax-hgrid.font(@fontSizeBody);
+}
+
+/**
+ * Import the vertical grid.
+ */
+@import "/@desinax/vertical-grid/less/grid.less";
+
+/**
+ * Show grid
+ */
+html.vgrid .inner-wrap {
+    @gridImage: "../image/grid_24x30x10-nomargin.png";
+    //@gridImage: "../image/grid_12x60x20-nomargin.png";
+    #desinax-vgrid.showGrid(@gridImage, 1100px);
+
+    &.inner-wrap-header,
+    &.inner-wrap-footer {
+        #desinax-vgrid.showGrid(@gridImage);
+    }
+}
+
+
+
+// Default grid, change to fit your requirements.
+// @columnWidth:   30;
+// @gutterWidth:   10;
+// @columns:       24;
+// @gridType:      "float"; // "flex"
+
+
+.row {
+    #desinax-vgrid.row();
+    // background-color: #0f0;
+    margin-bottom: 12px;
+}
+
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+// @import "layout/layout.less";
+@import "layout/responsive03.less";
+@import "layout/vgrid2.less";
+@import "layout/regions.less"; 
+
+/**
+ * My own settings, not currently in their own module.
+ */

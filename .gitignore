@@ -1,6 +1,5 @@
 /.bin
 /build
 /vendor
-/theme/src_bak
 memory::
 composer.lock
